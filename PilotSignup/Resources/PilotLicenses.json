@@ -1,0 +1,17 @@
+{
+    "pilot-licenses":
+    [
+        {
+            "type": "HPL",
+            "aircrafts" : ["H120", "R44", "EC135"]
+        },
+        {
+            "type": "eVTOL-A",
+            "aircrafts" : ["VX4", "E200"]
+        },
+        {
+            "type": "eVTOL-B",
+            "aircrafts" : ["VoloCity", "JobyS4", "CityAirbus"]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24D81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CDAircraft" representedClassName="CDAircraft" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="license" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPilotLicense" inverseName="aircrafts" inverseEntity="CDPilotLicense"/>
+    </entity>
+    <entity name="CDLicenseType" representedClassName="CDLicenseType" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="licenses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPilotLicense" inverseName="type" inverseEntity="CDPilotLicense"/>
+    </entity>
+    <entity name="CDPilotLicense" representedClassName="CDPilotLicense" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="aircrafts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDAircraft" inverseName="license" inverseEntity="CDAircraft"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDLicenseType" inverseName="licenses" inverseEntity="CDLicenseType"/>
+    </entity>
+</model>
